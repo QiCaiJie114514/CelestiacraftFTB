@@ -1,0 +1,26 @@
+{
+	icon: "create:wrench"
+	id: "669B01B72377F848"
+	loot_size: 1
+	order_index: 3
+	rewards: [
+		{ count: 16, item: "create:mechanical_drill" }
+		{ item: "create:mechanical_bearing" }
+		{ count: 4, item: "create:mechanical_arm" }
+		{ count: 16, item: "create:brass_ingot" }
+		{
+			item: {
+				Count: 1
+				id: "create:super_glue"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			command: "/title @p title {\"text\":\"恭喜抽中了垃圾！\"}"
+			type: "command"
+		}
+	]
+	title: "机械动力"
+}

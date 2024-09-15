@@ -1,0 +1,122 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "07C31801223C6737"
+	group: "5727D13600C331B6"
+	icon: "create:mechanical_arm"
+	id: "07C31801223C6737"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["动力臂可以拿取很多东西，是自动化基础"]
+			id: "28DD6BD4B4C202D9"
+			tasks: [{
+				id: "671748704CCAABBF"
+				item: "create:mechanical_arm"
+				type: "item"
+			}]
+			title: "自动化"
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["28DD6BD4B4C202D9"]
+			description: ["机械手能从这里拿取对应的东西，前提是设置了过滤，同样也能放置"]
+			id: "019311D22BDBCE5D"
+			rewards: [{
+				count: 8
+				id: "53A63F69F90F9AFB"
+				item: "create:smart_chute"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5329CA5E5C4B9DEE"
+				item: "create:smart_chute"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["28DD6BD4B4C202D9"]
+			description: [
+				"机械手能将对应的物品放进漏斗里，前提是设置好了分组，基本性质和安山漏斗一样，但是一次可以输出64个物品，并且能将过滤之外的物品挡住"
+				"{ \"text\": \"EDIT HERE\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"3FD7A3F6B1D3096B\" } }"
+			]
+			id: "5836F55715DB9EFF"
+			rewards: [
+				{
+					count: 16
+					id: "6BBDCBC881280AF8"
+					item: "create:electron_tube"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "5645BA6F7AE8D907"
+					item: "create:brass_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "3B1364ACA21249CB"
+				item: "create:brass_funnel"
+				type: "item"
+			}]
+			title: "更好的分类"
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["28DD6BD4B4C202D9"]
+			description: [
+				"基本性质和安山隧道一样，但是多个能组成组，更好的分流！一个隧道输入物品，其他隧道就能分流，如果其中一个设置了过滤，例如砂砾洗涤后的副产物燧石，就能将燧石与其他东西分开"
+				"{ \"text\": \"EDIT HERE\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"6A1397ACA3D43E49\" } }"
+			]
+			id: "232A25753CA9FDCB"
+			tasks: [{
+				id: "199DD41D65301CD6"
+				item: "create:brass_tunnel"
+				type: "item"
+			}]
+			title: "更好的隧道"
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["28DD6BD4B4C202D9"]
+			id: "105E9F779FE6524E"
+			tasks: [{
+				id: "41C5AC0BA62E6D75"
+				item: "create:content_observer"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["28DD6BD4B4C202D9"]
+			id: "2CCDB5B755E9BE2D"
+			tasks: [{
+				id: "5593C8EA4E0A874E"
+				item: "create:stockpile_switch"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["28DD6BD4B4C202D9"]
+			id: "6235C9DD928D2CA9"
+			tasks: [{
+				id: "40AAF28AFC0493AB"
+				item: "create:sequenced_gearshift"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+	]
+	title: "机械动力_智能化"
+}

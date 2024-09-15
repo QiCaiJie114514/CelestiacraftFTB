@@ -1,0 +1,663 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "555E061FBDF713C5"
+	group: "5727D13600C331B6"
+	icon: "create:wrench"
+	id: "555E061FBDF713C5"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"扳手，可以用来拆除一切和机械动力相关的东西"
+				"扳手，廉价，方便，是一个能陪伴你一直走下去的工具"
+				"目镜，能够窥探一切奥秘"
+			]
+			id: "75795A0659203E96"
+			rewards: [
+				{
+					id: "0032BDBE3E09066F"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					count: 16
+					id: "605740AFC3F72D44"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 2.0d
+			tasks: [
+				{
+					id: "763B23415AC33A1D"
+					item: "create:wrench"
+					type: "item"
+				}
+				{
+					id: "337501C9D860F8D6"
+					item: "create:goggles"
+					type: "item"
+				}
+			]
+			title: "最初的工具"
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["75795A0659203E96"]
+			description: [
+				"手摇曲柄：“加油，这将会是一个苦力的起点，加油干，农场主不会亏待你的”"
+				"水车：“可怜的孩子，我只要一桶水，就能提供应力，加入水车吧，当水车仙人，使用卡服之力！”"
+				"风车：“你看见我的同伴了嘛，他叫风帆，最开始我们四个一起工作，后来人越来越多，产生的力越来越大”"
+			]
+			id: "767E411F0CA2FB56"
+			rewards: [{
+				count: 16
+				id: "6FA1C8F9B0B09BF7"
+				item: "create:white_sail"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1643100BEB18EACC"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create:large_water_wheel"
+							}
+							{
+								Count: 1b
+								id: "create:windmill_bearing"
+							}
+							{
+								Count: 1b
+								id: "create:water_wheel"
+							}
+							{
+								Count: 1b
+								id: "create:hand_crank"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "应力源"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["767E411F0CA2FB56"]
+			description: ["能够压缩和压扁大量东西的机器"]
+			id: "297C150E97A995E4"
+			rewards: [{
+				count: 2
+				id: "607D210D0996ED6E"
+				item: "minecraft:iron_block"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5976E4D96261F426"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			title: "压缩！压扁！"
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["767E411F0CA2FB56"]
+			description: ["美味的茶水，安山合金，黄铜，我都能搅拌出来！"]
+			id: "71984D5795285545"
+			rewards: [
+				{
+					count: 6
+					id: "592594083B37126A"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "2EBCCADA7E2E20BC"
+					item: "create:basin"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "57C52ADBEF8CD794"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			title: "搅拌一下，更美味！"
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"71984D5795285545"
+				"297C150E97A995E4"
+				"5DE71C7A76993C80"
+				"28DD6BD4B4C202D9"
+				"327550DF792F6F5E"
+			]
+			description: ["你已经懂了最基础的玩法！那么就让我们开始旅途吧！"]
+			id: "2D73A9AE44D60014"
+			rewards: [
+				{
+					count: 8
+					id: "0C6D5F01DAF49D62"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "1B2428F5E5F708B7"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0C2A98C43B9FF811"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					id: "427E7450CE1F96B8"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+			]
+			title: "挂挡！加速！起飞！"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D73A9AE44D60014"]
+			id: "57E73B21FF05ED6C"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "30DC757F8BB7E90B"
+				table_id: 7393505099344509000L
+				type: "random"
+			}]
+			tasks: [{
+				id: "2369124F25FD5DD0"
+				item: "create:millstone"
+				type: "item"
+			}]
+			title: "细细的粉碎"
+			x: -0.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["57E73B21FF05ED6C"]
+			description: ["很大个的轮子，同样也很危险，若是脚滑掉入，那可就出不来咯"]
+			id: "1F6C6E78B8E73388"
+			rewards: [{
+				count: 64
+				id: "61EF304738BA2E97"
+				item: "create:experience_nugget"
+				type: "item"
+			}]
+			tasks: [{
+				count: 2L
+				id: "382A45AF1520B3EB"
+				item: { Count: 2, id: "create:crushing_wheel" }
+				type: "item"
+			}]
+			title: "更加仔细的粉碎！"
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2D73A9AE44D60014"]
+			description: ["一个不错的运输物品的方式，人站在上面也会被运走哦"]
+			id: "134C3EA66263A3E5"
+			rewards: [{
+				count: 16
+				id: "46D8D739DB864A32"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5BA59C02FE6F014C"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			title: "运输"
+			x: -0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["134C3EA66263A3E5"]
+			description: ["再也不用担心会被传送走了！能够直接转方向的传动方式"]
+			id: "264EA00A4487D198"
+			rewards: [{
+				count: 6
+				id: "2EBE9B9F8B65BEAA"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6BF1230D64D7CB87"
+				item: "create:encased_chain_drive"
+				type: "item"
+			}]
+			title: "更好的传动方式"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"264EA00A4487D198"
+				"134C3EA66263A3E5"
+			]
+			description: ["这下可以转向了！输出的应力会和输入的应力相反哦，常被当做翻转齿轮箱用"]
+			id: "6945AB3AF8C9D0A3"
+			rewards: [{
+				count: 16
+				id: "6655791AAC0626C4"
+				item: "create:gearbox"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4F50F0A943B6ABE1"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create:gearbox"
+							}
+							{
+								Count: 1b
+								id: "create:vertical_gearbox"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "转弯~"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"6945AB3AF8C9D0A3"
+				"264EA00A4487D198"
+			]
+			description: ["输入红石信号就能让机器停下来，不抗卸载机器的福音"]
+			id: "3C8963FD8FBEF2CA"
+			rewards: [
+				{
+					count: 32
+					id: "333DA9733E0CC40B"
+					item: "create:andesite_alloy"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "3FD5C92D88551F5B"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "5E039A74C6BCFB10"
+				item: "create:clutch"
+				type: "item"
+			}]
+			title: "急刹车！"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["264EA00A4487D198"]
+			description: ["让应力从这输入，再给他个红石信号，他就能让后面的链式传动箱速度x2！"]
+			id: "4A222FB773F60E67"
+			rewards: [{
+				count: 6
+				id: "4980AB688051E584"
+				item: "create:encased_chain_drive"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5522E27AD9B21954"
+				item: "create:adjustable_chain_gearshift"
+				type: "item"
+			}]
+			title: "要起飞了孩子！"
+			x: 2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"3C8963FD8FBEF2CA"
+				"4A222FB773F60E67"
+			]
+			description: ["再也不用用十字齿轮箱叠起来了，拉下拉杆，直接反转"]
+			id: "428F7C8155249333"
+			tasks: [{
+				id: "759AF4D7D1326746"
+				item: "create:gearshift"
+				type: "item"
+			}]
+			title: "一键翻转！"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D73A9AE44D60014"]
+			description: ["泵能抽走任何液体，管道是他们走的地方"]
+			id: "48BC52AC284A3837"
+			tasks: [
+				{
+					id: "7E8FEE19C1AE3D9C"
+					item: "create:fluid_pipe"
+					type: "item"
+				}
+				{
+					id: "2A86943B4896A85E"
+					item: "create:mechanical_pump"
+					type: "item"
+				}
+			]
+			title: "流体的通道"
+			x: -0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["48BC52AC284A3837"]
+			description: ["只要流体达到了10000格就能抽取无限液体"]
+			id: "5AB2CCB8DC8EB175"
+			rewards: [{
+				count: 16
+				id: "27A156C971F20C5A"
+				item: "create:fluid_pipe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "67F11615B2962533"
+				item: "create:hose_pulley"
+				type: "item"
+			}]
+			title: "远程抽取"
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5AB2CCB8DC8EB175"]
+			description: ["在上面放入要抽取的物品（水瓶里的，水桶里的都可以）就会只抽取这个液体拉！"]
+			id: "4B77CA83A00E978E"
+			rewards: [
+				{
+					count: 32
+					id: "569E3061FF662536"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					id: "6064929426EEA884"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [{
+				id: "0E2D10274A3011DC"
+				item: "create:smart_fluid_pipe"
+				type: "item"
+			}]
+			title: "选择流体抽取"
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["767E411F0CA2FB56"]
+			description: ["可以用机械手放置东西，将物品放在置物台上制作很多东西，例如：紧密构建等"]
+			id: "5DE71C7A76993C80"
+			rewards: [
+				{
+					count: 32
+					id: "313323AEA36A69DB"
+					item: "create:electron_tube"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "31367EA2580AAC50"
+					table_id: 7393505099344509000L
+					type: "random"
+				}
+			]
+			tasks: [{
+				id: "425D3E92D99FB5AF"
+				item: "create:deployer"
+				type: "item"
+			}]
+			title: "拿取放置打！"
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			description: ["这是一切的一切！不会的先按W思索再问！"]
+			id: "686632DBDD95A761"
+			size: 4.0d
+			subtitle: "要善于多W思索"
+			tasks: [{
+				id: "493DB2A1FCF9D24D"
+				title: "W键思索！"
+				type: "checkmark"
+			}]
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			description: ["任何东西都能从这进入容器，包括溜槽 箱子，同样能从里面输出物品"]
+			id: "3FD7A3F6B1D3096B"
+			rewards: [{
+				count: 5
+				id: "74ED7CC5812E4D58"
+				item: "create:andesite_funnel"
+				type: "item"
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "7C7CCAF08E26C145"
+				item: "create:andesite_funnel"
+				type: "item"
+			}]
+			title: "最简单的漏斗"
+			x: -7.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["3FD7A3F6B1D3096B"]
+			description: ["从侧面接传送带可以将物品分流，同样也是装饰传送带"]
+			id: "6A1397ACA3D43E49"
+			rewards: [{
+				count: 5
+				id: "77A85241202DBFCE"
+				item: "create:andesite_tunnel"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1F3961B80E042B42"
+				item: "create:andesite_tunnel"
+				type: "item"
+			}]
+			title: "分流与装饰"
+			x: -5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"28DD6BD4B4C202D9"
+				"767E411F0CA2FB56"
+			]
+			description: ["鼓风机正吹时，在前面放置相应的东西，就能处罚相应的效果，例如洗涤，熔炼，烟熏，缠魂，倒吹时也有一样的效果，不过得在鼓风机前放置"]
+			id: "327550DF792F6F5E"
+			tasks: [{
+				id: "47418E9A1FDA9772"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			title: "呼呼呼~"
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"28DD6BD4B4C202D9"
+				"2D73A9AE44D60014"
+			]
+			description: ["不要再用齿轮堆叠了！一键加速！"]
+			id: "20382CB5AADC4CF1"
+			rewards: [
+				{
+					count: 3
+					id: "53117BEB57ACFA15"
+					item: "create:rotation_speed_controller"
+					type: "item"
+				}
+				{
+					id: "1862543B51C9BE9A"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			tasks: [{
+				id: "34019E2FDA5A6ED1"
+				item: "create:rotation_speed_controller"
+				type: "item"
+			}]
+			title: "起飞！"
+			x: -0.5d
+			y: 3.0d
+		}
+		{
+			description: ["管理别开创拿awa"]
+			id: "43DAA75FB6CCF269"
+			rewards: [{
+				command: "/title @a title {\"text\":\"爹\"}"
+				id: "4102FE7F7AABABFF"
+				type: "command"
+			}]
+			size: 7.0d
+			subtitle: "管理别搞"
+			tasks: [{
+				id: "71FC009D5D947879"
+				item: "create:creative_crate"
+				type: "item"
+			}]
+			title: "你能有我叫你爹！"
+			x: -4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1F6C6E78B8E73388"]
+			description: ["我的钻头可是可以突破天际的口牙"]
+			icon: "minecraft:cobblestone"
+			id: "4368CC04FFB8A33E"
+			rewards: [
+				{
+					count: 16
+					id: "5BFC255B8AC9AA3F"
+					item: "create:mechanical_drill"
+					type: "item"
+				}
+				{
+					id: "4EB3C7B23D66EA9F"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "安东（doge"
+			tasks: [{
+				count: 2560L
+				id: "1C79E7F5A4C2C0D3"
+				item: { Count: 1280, id: "minecraft:cobblestone" }
+				type: "item"
+			}]
+			title: "突破天际！"
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["20382CB5AADC4CF1"]
+			description: ["你总不可能只用一个吧awa，这可是必要的东西，模组里有很多东西都要这个来合成的哦"]
+			id: "570456E5A84AB5A1"
+			rewards: [{
+				count: 16
+				id: "683F1D5182AD50A6"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6B8F0F86BADBC96E"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			title: "自动合成"
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"767E411F0CA2FB56"
+				"48BC52AC284A3837"
+			]
+			description: [
+				"烈焰人燃烧室，流体储罐，蒸汽引擎，组合到一起就是一个巨大的应力！"
+				"得不断输水哦，烈焰人燃烧室越旺，应力越大"
+				"对应的等级就要相同的蒸汽引擎来输出"
+			]
+			id: "1931A1D91849CCA6"
+			rewards: [{
+				count: 4
+				id: "625DAF1E0D3340A9"
+				item: "create:steam_engine"
+				type: "item"
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "6DA9CB40746A7D44"
+				item: "create:steam_engine"
+				type: "item"
+			}]
+			title: "更大的应力！"
+			x: -6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1931A1D91849CCA6"]
+			description: ["不同长度的蒸汽笛会有不同的音色哦，当然得先插到蒸汽引擎上，期待你们搞出音乐会，来人演奏管风琴awa"]
+			id: "0F38013A025B896A"
+			rewards: [{
+				count: 15
+				id: "12C29C6D86CD3A3D"
+				item: "create:steam_whistle"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 3.0d
+			tasks: [{
+				id: "3C7C702969EE2207"
+				item: "create:steam_whistle"
+				type: "item"
+			}]
+			title: "啊~美妙的声音"
+			x: -9.5d
+			y: -2.0d
+		}
+	]
+	title: "机械动力_入门"
+}
